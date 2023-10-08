@@ -1,0 +1,9 @@
+.form {
+  &__additional {
+    text-transform: uppercase;
+  }
+
+  &__special-text {
+    color: $first-color;
+  }
+}

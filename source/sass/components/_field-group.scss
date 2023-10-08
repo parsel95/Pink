@@ -1,0 +1,19 @@
+.field-group {
+  border: none;
+
+  &--other-background {
+    background-color: $third-color-primary;
+  }
+
+  &__heading {
+    color: $first-color;
+
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    @include list;
+  }
+}

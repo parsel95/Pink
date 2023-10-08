@@ -1,0 +1,40 @@
+// Viewports
+
+$tablet-width: 660px;
+$desktop-width: 1200px;
+$mobile-width-only: 659px;
+
+// fonts
+
+$font-body: "Open Sans", sans-serif;
+
+// colors
+
+$color-white: #FFFFFF;
+$color-black: #000000;
+
+$color-gray-50: #F2F2F2;
+$color-gray-150:#EFEFEF;
+$color-gray-300: #E5E5E5;
+$color-gray-350: #DEDEDE;
+$color-gray-850: #283645;
+$color-gray-900: #1D2631;
+$color-gray-950: #252527;
+
+$color-pink-650: #D22856;
+$color-gree-dark: #2AAB6D;
+$color-gree-light: #3DC644;
+$color-orange: #F25B26;
+
+$text-color-sold: $color-black;
+$background-color: $color-white;
+$backround-opacity-color: $color-gray-950;
+$button-cancel-color: $color-gray-150;
+$first-color: $color-pink-650;
+$second-color-primary: $color-gray-850;
+$second-color-secondary: $color-gray-900;
+$third-color-primary: $color-gray-50;
+$third-color-secondary: $color-gray-300;
+$fourth-color-primary: $color-gree-dark;
+$fourth-color-secondary: $color-gree-light;
+$fifth-color: $color-orange;

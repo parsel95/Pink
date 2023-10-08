@@ -1,0 +1,33 @@
+.promo {
+  &__heading {
+    margin: 0;
+
+    color: $color-white;
+    text-align: center;
+
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 315px;
+      padding: 0 20px;
+    }
+  }
+
+  &__image {
+    display: block;
+
+    @media (max-width: $mobile-width-only) {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 660px;
+      height: 545px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 1050px;
+      height: 645px;
+    }
+  }
+}

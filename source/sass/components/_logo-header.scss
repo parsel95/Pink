@@ -1,0 +1,36 @@
+.logo-header {
+  color: $color-white;
+
+  :hover {
+    color: $color-pink-650;
+  }
+
+  :active {
+    opacity: 0.3;
+    color: $color-white;
+  }
+
+  &__sign {
+    display: none;
+
+    @media (max-width: $mobile-width-only) {
+      display: block;
+    }
+  }
+
+  &__image {
+    display: none;
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+      display: block;
+    }
+  }
+
+  &__decorated {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "extends": "linthtml-config-htmlacademy",
+  "rules": {
+    "indent-width": [
+      true,
+      2
+    ],
+    "attr-new-line": [
+      false
+    ],
+    "tag-req-attr": [
+      false
+    ],
+    "attr-name-style": [
+      false
+    ]
+  }
+}

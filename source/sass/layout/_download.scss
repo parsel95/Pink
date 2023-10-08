@@ -1,0 +1,38 @@
+.download {
+  background-color: $color-gray-900;
+  color: $color-white;
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 28px;
+    padding-bottom: 31px;
+  }
+
+  &__button {
+    padding: 16px 20px;
+
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__list {
+    @include list;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 35px;
+
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+
+    font-weight: 300;
+    line-height: 24px;
+    text-align: center;
+  }
+}

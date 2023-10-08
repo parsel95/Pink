@@ -1,0 +1,17 @@
+.field {
+  &__lead {
+    color: $first-color;
+
+    text-transform: uppercase;
+  }
+
+  &__input::placeholder,
+  &__input {
+    color: $second-color-primary;
+
+    font-family: $font-body;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}

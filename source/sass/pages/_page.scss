@@ -1,0 +1,23 @@
+.page {
+  min-width: 320px;
+  height: 100%;
+
+  color: $second-color-primary;
+
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+
+  &__body {
+    min-height: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+  }
+
+  &__body-header-wrapper {
+    background: url("../img/background-promo.jpg") no-repeat center;
+    background-size: cover;
+  }
+}

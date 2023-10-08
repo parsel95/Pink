@@ -1,0 +1,31 @@
+.rate {
+  &__list {
+    @include list;
+  }
+
+  &__title {
+    color: $color-white;
+    background-color: $second-color-primary;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__hit {
+    background-color: $first-color;
+    transform: rotate(-45deg);
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  &__price {
+    font-weight: 300;
+    font-size: 18px;
+  }
+
+  &__point {
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,40 @@
+.post {
+  line-height: 24px;
+  font-size: 12px;
+
+  background-color: $third-color-primary;
+
+  &__panorama-mark {
+    @include flex-center;
+    width: 140px;
+    height: 36px;
+
+    color: $color-white;
+
+    font-weight: 700;
+    text-transform: uppercase;
+
+    background-color: $first-color;
+  }
+
+  &__author {
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  &__time {
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: 14px;
+  }
+
+  &__amount-likes {
+    color: $first-color;
+
+    text-transform: uppercase;
+  }
+}

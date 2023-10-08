@@ -1,0 +1,26 @@
+.contacts {
+  text-align: center;
+
+  &__list {
+    @include list;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  &__link {
+    color: $first-color;
+
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 33px;
+    text-decoration: none;
+  }
+
+  &__link address {
+    font-style: normal;
+  }
+}
