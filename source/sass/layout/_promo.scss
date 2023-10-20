@@ -1,4 +1,21 @@
 .promo {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 48.4%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    display: flex;
+  }
+
+  &__wrapper {
+    @media (min-width: $desktop-width) {
+      width: 300px;
+    }
+  }
+
   &__heading {
     margin: 0;
 
@@ -8,24 +25,50 @@
     @media (max-width: $mobile-width-only) {
       margin-bottom: 315px;
       padding: 0 20px;
+      line-height: 120%;
+    }
+
+    @media (min-width: $tablet-width) {
+      position: relative;
+      z-index: 1;
+
+      padding: 18px 35px 0 54px;
+
+      line-height: 120%;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0;
+      padding-right: 26.5px;
+      padding-left: 26.5px;
+
+      font-size: 50px;
+      line-height: normal;
     }
   }
 
   &__image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
     display: block;
 
     @media (max-width: $mobile-width-only) {
-      position: absolute;
-      left: 0;
-      bottom: 0;
+      bottom: -315px;
     }
 
     @media (min-width: $tablet-width) {
+      bottom: -384px;
+
+      max-width: none;
       width: 660px;
       height: 545px;
     }
 
     @media (min-width: $desktop-width) {
+      bottom: -438px;
+
       width: 1050px;
       height: 645px;
     }

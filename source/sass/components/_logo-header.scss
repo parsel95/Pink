@@ -19,10 +19,16 @@
   }
 
   &__image {
-    display: none;
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
 
-    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    @media (min-width: $tablet-width) {
       display: block;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
     }
   }
 

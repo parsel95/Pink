@@ -18,6 +18,15 @@
     color: $color-white;
     border-color: $color-white;
     background-color: $color-gray-900;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-pink-650;
+    }
+
+    &:active {
+      color: rgba($color: $color-pink-650, $alpha: 0.3);
+    }
   }
 
   &--cancel {

@@ -1,9 +1,22 @@
 .page-main {
+  &__advantages {
+    margin-bottom: 40px;
+  }
+
   &__heading {
     font-weight: 300;
     font-size: 24px;
     line-height: 120%;
     text-align: center;
+
+    @media (min-width: $tablet-width) {
+      font-size: 40px;
+      line-height: normal;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 50px;
+    }
   }
 
   &__subheading {

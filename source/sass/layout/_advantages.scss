@@ -1,18 +1,228 @@
 .advantages {
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(175.2deg, $color-white 25.4%, $color-gray-50 25.4%);
+  }
+
+  &__heading {
+    margin: 0;
+  }
+
+  &__heading-text-first {
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: -2px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__heading-text-second {
+    @media (min-width: $tablet-width) {
+      max-width: 335px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 417px;
+    }
+  }
+
+  &__wrapper {
+    @media (max-width: $mobile-width-only) {
+      background-image: conic-gradient(from 87deg at 0% 7%, $color-gray-50 0%, $color-white 97%);
+    }
+
+    @media (min-width: $tablet-width) {
+      background-image: linear-gradient(transparent 60.3%, $color-white 60.3%), linear-gradient(175.5deg, $color-white 9%, $color-gray-50 9%);
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 57px;
+      padding-bottom: 68px;
+
+      background-image: none;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: $mobile-width-only) {
+      padding-top: 112px;
+      padding-bottom: 319px;
+
+      text-align: center;
+    }
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: 268px 1fr;
+      gap: 0 42px;
+
+      min-height: 516px;
+      padding-top: 35px;
+      margin-bottom: 44px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: block;
+
+      padding-top: 0;
+      margin-bottom: 67px;
+    }
+  }
+
   &__list {
     @include list;
-    background-color: $third-color-primary;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 35px 0;
+
+      padding-top: 70px;
+      padding-bottom: 41px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px 8px;
+
+      padding: 0;
+    }
+  }
+
+  &__item {
+    @media (min-width: $desktop-width) {
+      position: relative;
+
+      padding-top: 357px;
+
+      text-align: center;
+
+      .advantages__list &:first-child,
+      .advantages__list &:last-child {
+        position: relative;
+      }
+
+      .advantages__list &:first-child {
+        right: 3px;
+      }
+
+      .advantages__list &:last-child {
+        left: 3px;
+      }
+    }
   }
 
   &__title {
-    color: $text-color-sold;
+    margin: 0;
 
+    color: $text-color-sold;
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
+
+    @media (max-width: $not-desktop-width) {
+      margin-bottom: 12px;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: relative;
+      z-index: 1;
+
+      max-width: 240px;
+      margin: 0 auto;
+      margin-bottom: 22px;
+
+      font-size: 30px;
+      line-height: 30px;
+    }
   }
 
   &__text {
+    margin: 0;
     line-height: 24px;
+
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 31px;
+
+      .advantages__list .advantages__item:nth-child(3) & {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      position: relative;
+      z-index: 1;
+
+      max-width: 249px;
+      margin: 0 auto;
+
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  &__item-img {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      top: 0;
+      z-index: 0;
+    }
+  }
+
+  &__effect {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+    }
+  }
+
+  &__image-wrapper {
+    @media (max-width: $mobile-width-only) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (min-width: $tablet-width) {
+      order: -1;
+    }
+  }
+
+  &__image {
+    @media (max-width: $mobile-width-only) {
+      position: absolute;
+      bottom: -43px;
+
+      display: block;
+      overflow: hidden;
+    }
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      bottom: -67px;
+
+      width: 268px;
+      height: 547px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
   }
 }

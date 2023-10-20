@@ -6,19 +6,34 @@
   line-height: 32px;
   text-transform: uppercase;
 
-  @media (max-width: $desktop-width) {
+  @media (max-width: $not-desktop-width) {
     background-color: $second-color-primary;
     text-align: center;
   }
 
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-self: end;
+  }
+
 
   &__item {
-    @media (max-width: $desktop-width) {
+    @media (max-width: $not-desktop-width) {
       box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;
       border-top: 1px $color-black solid;
 
       &:last-child {
         border-bottom: 1px solid $color-black;
+      }
+    }
+
+    &--active {
+      @media (min-width: $desktop-width) {
+        text-decoration: underline;
+        text-underline-offset: 14px;
+        text-decoration-thickness: 2px;
+        text-decoration-color: $color-white;
+        z-index: 5;
       }
     }
   }
@@ -29,9 +44,29 @@
     color: $color-white;
     text-decoration: none;
 
-    @media (max-width: $desktop-width) {
+    &:hover {
+      color: $color-pink-650;
+    }
+
+    &:active {
+      opacity: 0.3;
+
+      @media (min-width: $desktop-width) {
+        color: $color-white;
+      }
+    }
+
+    @media (max-width: $not-desktop-width) {
       padding-top: 15px;
       padding-bottom: 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 46.5px 39.5px;
+
+      text-transform: none;
+      font-weight: 400;
+      line-height: 18px;
     }
   }
 }

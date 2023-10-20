@@ -34,7 +34,7 @@
           </button>
 
           <ul class="page-header__list site-menu">
-            <li class="site-menu__item">
+            <li class="site-menu__item site-menu__item--active">
               <a class="site-menu__link" href="./index.html">Главная</a>
             </li>
             <li class="site-menu__item">
@@ -51,74 +51,103 @@
       </nav>
 
       <div class="page-header__promo promo container">
-        <h1 class="visually-hidden">Приложение PINK</h1>
-        <p class="promo__heading page-main__heading">Взгляните на жизнь иначе!</p>
+        <div class="promo__wrapper">
+          <h1 class="visually-hidden">Приложение PINK</h1>
+          <p class="promo__heading page-main__heading">Взгляните на жизнь иначе!</p>
 
-        <picture>
-          <source type="image/png" media="(min-width: 1200px)" srcset="./img/background/phone-background-large.png 1x, img/background/phone-background-large@2x.png 2x">
-          <source type="image/png" media="(min-width: 660px)" srcset="./img/background/phone-background-medium.png 1x, img/background/phone-background-medium@2x.png 2x">
-          <img class="promo__image" src="./img/background/phone-background-small.png" srcset="./img/background/phone-background-small@2x.png 2x" alt="Вид здания на экране смартфона в розовом цвете" width="320" height="286">
-        </picture>
+          <picture>
+            <source type="image/png" media="(min-width: 1000px)" srcset="./img/background/phone-background-large.png 1x, img/background/phone-background-large@2x.png 2x">
+            <source type="image/png" media="(min-width: 660px)" srcset="./img/background/phone-background-medium.png 1x, img/background/phone-background-medium@2x.png 2x">
+            <img class="promo__image" src="./img/background/phone-background-small.png" srcset="./img/background/phone-background-small@2x.png 2x" alt="Вид здания на экране смартфона в розовом цвете" width="320" height="286">
+          </picture>
+        </div>
       </div>
 
       <div class="page-header__download download container">
-        <a class="download__button button button--secondary" href="#">Скачать приложение</a>
+        <div class="download__wrapper">
+          <a class="download__button button button--secondary" href="#">Скачать приложение</a>
 
-        <ul class="download__list">
-          <li class="download__item">
-            <a class="download__link download__link_ios" href="#" download="#">
-              <svg width="47" height="56">
-                <use xlink:href="./img/sprite.svg#apple-app-icon"></use>
-              </svg>
-              <span class="visually-hidden">Скачать приложение для IOS</span>
-            </a>
-          </li>
-          <li class="download__item">
-            <a class="download__link download__link_android" href="#" download="#">
-              <svg width="43" height="47">
-                <use xlink:href="./img/sprite.svg#android-app-icon"></use>
-              </svg>
-              <span class="visually-hidden">Скачать приложение для Android</span>
-            </a>
-          </li>
-          <li class="download__item">
-            <a class="download__link download__link_windows" href="#" download="#">
-              <svg width="44" height="41">
-                <use xlink:href="./img/sprite.svg#microsoft-app-icon"></use>
-              </svg>
-              <span class="visually-hidden">Скачать приложение для Windows</span>
-            </a>
-          </li>
-        </ul>
+          <ul class="download__list">
+            <li class="download__item">
+              <a class="download__link download__link_ios" href="#" download="#">
+                <svg width="47" height="56">
+                  <use xlink:href="./img/sprite.svg#apple-app-icon"></use>
+                </svg>
+                <span class="visually-hidden">Скачать приложение для IOS</span>
+              </a>
+            </li>
+            <li class="download__item">
+              <a class="download__link download__link_android" href="#" download="#">
+                <svg width="43" height="47">
+                  <use xlink:href="./img/sprite.svg#android-app-icon"></use>
+                </svg>
+                <span class="visually-hidden">Скачать приложение для Android</span>
+              </a>
+            </li>
+            <li class="download__item">
+              <a class="download__link download__link_windows" href="#" download="#">
+                <svg width="44" height="41">
+                  <use xlink:href="./img/sprite.svg#microsoft-app-icon"></use>
+                </svg>
+                <span class="visually-hidden">Скачать приложение для Windows</span>
+              </a>
+            </li>
+          </ul>
 
-        <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </div>
       </div>
-
     </header>
 
     <main class="page__main page-main">
-      <section class="page-main__section advantages">
-        <h2 class="page-main__heading">
-          <div class="advantages__heading">Устали от серости мегаполиса?</div>
-          <div class="advantages__heading">Нам есть, что вам предложить!</div>
+      <section class="page-main__section page-main__advantages advantages">
+        <h2 class="page-main__heading advantages__heading">
+          <div class="advantages__heading-text advantages__heading-text-first">Устали от серости мегаполиса?</div>
+          <div class="advantages__heading-text advantages__heading-text-second">Нам есть, что вам предложить!</div>
         </h2>
 
-        <ul class="advantages__list">
-          <li class="advantages__item">
-            <h3 class="advantages__title">Поднимает настроение</h3>
-            <p class="advantages__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-          </li>
-          <li class="advantages__item">
-            <h3 class="advantages__title">Меняет мир вокруг</h3>
-            <p class="advantages__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-          </li>
-          <li class="advantages__item">
-            <h3 class="advantages__title">Заводит новых друзей</h3>
-            <p class="advantages__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-          </li>
-        </ul>
+        <div class="advantages__wrapper">
+          <div class="advantages__container container">
+            <div class="advantages__inner">
+              <ul class="advantages__list">
+                <li class="advantages__item">
+                  <img class="advantages__item-img" src="./img/index/iphones/iphone-grey.png" srcset="./img/index/iphones/iphone-grey@2x.png 2x" alt="Фото мусорки с серым фильтром на экране айфона" width="308" height="490">
+                  <h3 class="advantages__title">Поднимает настроение</h3>
+                  <p class="advantages__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+                </li>
 
-        <img class="advantages__image" src="./img/iphone-common.png" alt="Экран айфона со смайликом улыбки и приветствием на розовом фоне" width="157" height="320">
+                <li class="advantages__item">
+                  <img class="advantages__item-img" src="./img/index/iphones/iphone-pink.png" srcset="./img/index/iphones/iphone-pink@2x.png 2x" alt="Фото мусорки с розовым фильтром на экране айфона" width="308" height="490">
+                  <h3 class="advantages__title">Меняет мир вокруг</h3>
+                  <p class="advantages__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                </li>
+
+                <li class="advantages__item">
+                  <img class="advantages__item-img" src="./img/index/iphones/iphone-hello.png" srcset="./img/index/iphones/iphone-hello@2x.png 2x" alt="Фото мусорки с розовым фильтром на экране айфона, приветсвенной надписью и смайликом" width="308" height="490">
+                  <h3 class="advantages__title">Заводит новых друзей</h3>
+                  <p class="advantages__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+                </li>
+              </ul>
+
+              <picture class="advantages__image-wrapper">
+                <source type="image/png" media="(min-width: 660px)" srcset="./img/index/iphones/iphone-hello-medium.png 1x, img/index/iphones/iphones/iphone-hello-medium@2x.png 2x">
+                <img class="advantages__image" src="./img/index/iphones/iphone-hello-small.png" srcset="./img/index/iphones/iphones/iphone-hello-small@2x.png 2x" alt="Экран айфона со смайликом улыбки и приветствием на розовом фоне" width="157" height="320">
+              </picture>
+            </div>
+
+            <div class="advantages__effect effect">
+              <div class="effect__image"></div>
+
+              <div class="effect__wrapper">
+                <h3 class="effect__title">Эффект на 24 часа!</h3>
+
+                <p class="effect__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+
+                <a class="effect__link" href="#" >Узнать больше об исследовании</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="page-main__section reviews">

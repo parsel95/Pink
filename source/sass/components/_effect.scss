@@ -1,0 +1,110 @@
+.effect {
+  display: grid;
+  grid-template-columns: 238px 1fr;
+  gap: 0 72px;
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 298px 1fr;
+  }
+
+  &__image {
+    @media (min-width: $tablet-width) {
+      content: "";
+      display: block;
+      width: 238px;
+      height: 296px;
+
+      background-image: url("../img/index/stopwatch-medium.png");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @supports (background-image: url("../img/index/stopwatch-medium.webp")) {
+        background-image: url("../img/index/stopwatch-medium.webp");
+      }
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index/stopwatch-medium@2x.png");
+
+        @supports (background-image: url("../img/index/stopwatch-medium@2x.webp")) {
+          background-image: url("../img/index/stopwatch-medium@2x.webp");
+        }
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 298px;
+      height: 345px;
+
+      background-image: url("../img/index/stopwatch-large.png");
+
+      @supports (background-image: url("../img/index/stopwatch-large.webp")) {
+        background-image: url("../img/index/stopwatch-large.webp");
+      }
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index/stopwatch-large@2x.png");
+
+        @supports (background-image: url("../img/index/stopwatch-large@2x.webp")) {
+          background-image: url("../img/index/stopwatch-large@2x.webp");
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    @media (min-width: $tablet-width) {
+      padding-top: 51px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 96px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+
+    color: $color-black;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+
+    @media (min-width: $tablet-width) {
+      max-width: 168px;
+      margin-bottom: 11px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: none;
+      margin-bottom: 25px;
+
+      line-height: 30px;
+    }
+  }
+
+  &__text {
+    line-height: 24px;
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+      margin-bottom: 7px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 30px;
+
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  &__link {
+    color: $color-pink-650;
+    line-height: 24px;
+
+    @media (min-width: $desktop-width) {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}
