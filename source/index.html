@@ -30,7 +30,7 @@
           </a>
 
           <button class="page-header__toggler" type="button">
-            <span class="visually-hidden">Открыть меню</span>
+            <span class="visually-hidden">Открыть меню.</span>
           </button>
 
           <ul class="page-header__list site-menu">
@@ -52,7 +52,7 @@
 
       <div class="page-header__promo promo container">
         <div class="promo__wrapper">
-          <h1 class="visually-hidden">Приложение PINK</h1>
+          <h1 class="visually-hidden">Приложение PINK.</h1>
           <p class="promo__heading page-main__heading">Взгляните на жизнь иначе!</p>
 
           <picture>
@@ -69,27 +69,21 @@
 
           <ul class="download__list">
             <li class="download__item">
-              <a class="download__link download__link_ios" href="#" download="#">
-                <svg width="47" height="56">
-                  <use xlink:href="./img/sprite.svg#apple-app-icon"></use>
-                </svg>
-                <span class="visually-hidden">Скачать приложение для IOS</span>
+              <a class="download__link download__link--ios" href="#" download="#">
+                <img src="./img/icons/apple-app-icon.svg" alt="" width="47" height="56">
+                <span class="visually-hidden">Скачать приложение для IOS.</span>
               </a>
             </li>
             <li class="download__item">
-              <a class="download__link download__link_android" href="#" download="#">
-                <svg width="43" height="47">
-                  <use xlink:href="./img/sprite.svg#android-app-icon"></use>
-                </svg>
-                <span class="visually-hidden">Скачать приложение для Android</span>
+              <a class="download__link download__link--android" href="#" download="#">
+                <img src="./img/icons/android-app-icon.svg" alt="" width="43" height="47">
+                <span class="visually-hidden">Скачать приложение для Android.</span>
               </a>
             </li>
             <li class="download__item">
-              <a class="download__link download__link_windows" href="#" download="#">
-                <svg width="44" height="41">
-                  <use xlink:href="./img/sprite.svg#microsoft-app-icon"></use>
-                </svg>
-                <span class="visually-hidden">Скачать приложение для Windows</span>
+              <a class="download__link download__link--windows" href="#" download="#">
+                <img src="./img/icons/microsoft-app-icon.svg" alt="" width="44" height="41">
+                <span class="visually-hidden">Скачать приложение для Windows.</span>
               </a>
             </li>
           </ul>
@@ -151,34 +145,52 @@
       </section>
 
       <section class="page-main__section reviews">
-        <h2 class="visually-hidden">Отзывы</h2>
+        <h2 class="visually-hidden">Отзывы.</h2>
 
-        <div class="reviews__wrapper review slider">
-          <div class="review__list slider__list">
-            <div class="review__item slider__item">
+        <div class="reviews__wrapper container">
+          <ol class="reviews__list">
+            <li class="reviews__item review reviews__item--active" data-name="reviewsSlide1">
               <p class="review__author-name">Николай Петров</p>
               <blockquote class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
-            </div>
-            <div class="review__item slider__item">
-              <p class="review__author-name">Николай Петров</p>
+              <p class="review__author-description">25 лет, водитель трамвая</p>
+            </li>
+            <li class="reviews__item review" data-name="reviewsSlide2">
+              <p class="review__author-name">Иван Иванов</p>
               <blockquote class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
-            </div>
-            <div class="review__item slider__item">
-              <p class="review__author-name">Николай Петров</p>
+              <p class="review__author-description">25 лет, водитель трамвая</p>
+            </li>
+            <li class="reviews__item review" data-name="reviewsSlide3">
+              <p class="review__author-name">Василий Васильев</p>
               <blockquote class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
-            </div>
-          </div>
+              <p class="review__author-description">25 лет, водитель трамвая</p>
+            </li>
+          </ol>
 
-          <p class="reviews__toggles slider__toggles">
-            <button class="slider__toggle slider__toggle_current" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
+          <p class="reviews__toggles">
+            <button class="reviews__toggle reviews__toggle--active" type="button" data-name="reviewsSlide1"><span class="visually-hidden">Первый отзыв.</span></button>
+            <button class="reviews__toggle" type="button" data-name="reviewsSlide2"><span class="visually-hidden">Второй отзыв.</span></button>
+            <button class="reviews__toggle" type="button" data-name="reviewsSlide3"><span class="visually-hidden">Третий отзыв.</span></button>
           </p>
+
+          <div class="reviews__arrows">
+            <a class="reviews__arrow reviews__arrow--left" href="#">
+              <svg width="22" height="41">
+                <use xlink:href="./img/sprite.svg#left-arrow"></use>
+              </svg>
+              <span class="visually-hidden">Предыдущий отзыв.</span>
+            </a>
+            <a class="reviews__arrow reviews__arrow--right" href="#">
+              <svg width="22" height="41">
+                <use xlink:href="./img/sprite.svg#left-arrow"></use>
+              </svg>
+              <span class="visually-hidden">Следующий отзыв.</span>
+            </a>
+          </div>
         </div>
       </section>
 
       <section class="page-main__section rates">
-        <h2 class="visually-hidden">Тарифы</h2>
+        <h2 class="visually-hidden">Тарифы.</h2>
 
         <div class="rates__wrapper rate slider">
           <ul class="rate__list slider__list">
@@ -252,23 +264,23 @@
       <ul class="page-footer__social social">
         <li class="social__item">
           <a class="social__link social__link_twitter" href="#">
-            <span class="visually-hidden">Twitter</span>
+            <span class="visually-hidden">Twitter.</span>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link_facebook" href="#">
-            <span class="visually-hidden">Facebook</span>
+            <span class="visually-hidden">Facebook.</span>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link_youtube" href="#">
-            <span class="visually-hidden">Youtube</span>
+            <span class="visually-hidden">Youtube.</span>
           </a>
         </li>
       </ul>
 
       <a class="page-footer__developer developer" href="https://htmlacademy.ru/intensive/adaptive">
-        <span class="visually-hidden">Разработано в HTML Academy</span>
+        <span class="visually-hidden">Разработано в HTML Academy.</span>
         Разработано
         <img class="developer__image" src="./img/logo-html.svg" width="27" height="34" alt="" aria-hidden="true">
       </a>

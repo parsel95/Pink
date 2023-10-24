@@ -1,3 +1,5 @@
+// Гамбургер
+
 const navElement = document.querySelector('.page-header__nav');
 const buttonElement = document.querySelector('.page-header__toggler');
 
@@ -13,7 +15,7 @@ buttonElement.addEventListener('click', () => {
   }
 });
 
-// Padding для изображений котов до и после на Планшетном разрешении
+// Padding для изображений котов до и после на Планшетном разрешении и br в секции effect при планшетном разрешении
 
 let imagesFrame = document.querySelector('.promo__image');
 const tabletWidthMediaQuery = window.matchMedia('(min-width: 660px) and (max-width: 999px)');
@@ -63,3 +65,69 @@ function resizeWidthOnly(a,b) {
 resizeWidthOnly(function() {
   imagesFramePosition = (window.innerWidth - baseWidth)  + 'px';
 });
+
+// Слайдер по отзывам
+
+let reviewsToggles = document.querySelectorAll('.reviews__toggle');
+let reviewsItems = document.querySelectorAll('.reviews__item');
+
+for (let i = 0; i < reviewsToggles.length; i++) {
+  reviewsToggles[i].addEventListener('click', function(evt) {
+    evt.preventDefault();
+    slideSwitchReviews(reviewsToggles[i].dataset.name)
+  });
+};
+
+function slideSwitchReviews(slideNumberDelivery) {
+  if (typeof slideNumberDelivery === 'number') {
+    for (let i = 0; i < reviewsItems.length; i++) {
+      if (i != slideNumberDelivery) {
+        reviewsItems[i].classList.remove('reviews__item--active');
+        reviewsToggles[i].classList.remove('reviews__toggle--active');
+      } else {
+        reviewsItems[i].classList.add('reviews__item--active');
+        reviewsToggles[i].classList.add('reviews__toggle--active');
+      }
+    }
+  } else {
+    for (let i = 0; i < reviewsItems.length; i++) {
+      if (reviewsItems[i].dataset.name != slideNumberDelivery) {
+        reviewsItems[i].classList.remove('reviews__item--active');
+        reviewsToggles[i].classList.remove('reviews__toggle--active');
+      } else {
+        reviewsItems[i].classList.add('reviews__item--active');
+        reviewsToggles[i].classList.add('reviews__toggle--active');
+      }
+    }
+  }
+};
+
+let reviewPrev = document.querySelector('.reviews__arrow--left');
+let reviewNext = document.querySelector('.reviews__arrow--right');
+let currentSlide = 0;
+
+function validSlideNumberCheck(slideNumber) {
+  let validNumber = slideNumber;
+
+  if (slideNumber < 0) {
+    validNumber = reviewsItems.length - 1;
+  } else if (slideNumber > reviewsItems.length - 1) {
+    validNumber = 0;
+  }
+
+  currentSlide = validNumber;
+
+  return currentSlide;
+};
+
+reviewPrev.onclick = function(evt){
+  evt.preventDefault();
+  let newSlide = currentSlide - 1;
+  slideSwitchReviews(validSlideNumberCheck(newSlide));
+}
+
+reviewNext.onclick = function(evt){
+  evt.preventDefault();
+  let newSlide = currentSlide + 1;
+  slideSwitchReviews(validSlideNumberCheck(newSlide));
+}

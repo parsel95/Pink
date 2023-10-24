@@ -1,6 +1,14 @@
 .page-main {
   &__advantages {
     margin-bottom: 40px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 90px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 72px;
+    }
   }
 
   &__heading {

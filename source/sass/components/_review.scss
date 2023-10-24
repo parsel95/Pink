@@ -1,9 +1,56 @@
 .review {
-  &__author-name {
-    color: $text-color-sold;
+  display: flex;
+  flex-direction: column;
 
+  &__author-name {
+    margin: 0;
+    margin-bottom: 13px;
+
+    color: $color-black;
     font-weight: 700;
     font-size: 18px;
     text-align: center;
+
+    @media (min-width: $tablet-width) {
+      order: 1;
+      margin-bottom: -1px;
+
+      font-size: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 2px;
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    margin: 0 auto;
+    margin-bottom: 27px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 36px;
+
+      font-size: 18px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 688px;
+    }
+  }
+
+  &__author-description {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+      order: 2;
+      margin: 0;
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 18px;
+    }
   }
 }
