@@ -1,14 +1,10 @@
 .page-header {
-  position: relative;
+  overflow: hidden;
 
   background-color: $backround-opacity-color;
 
-  @media (max-width: $mobile-width-only) {
-    margin-bottom: 197px;
-  }
-
   @media (max-width: $not-desktop-width) {
-    padding-bottom: 114px;
+    padding-bottom: 271px;
 
     background-image: url("../img/background/promo-background-medium.jpg");
     background-repeat: no-repeat;
@@ -26,6 +22,10 @@
         background-image: url("../img/background/promo-background-medium@2x.webp");
       }
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 114px;
   }
 
   @media (min-width: $desktop-width) {
@@ -49,19 +49,45 @@
     }
   }
 
+  &--catalog {
+    @media (max-width: $not-desktop-width) {
+      padding-bottom: 76px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 129px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-bottom: 53px;
+    }
+  }
+
   &__nav {
     background-color: rgba($color: #000000, $alpha: 0.3);
 
     @media (max-width: $mobile-width-only) {
       margin-bottom: 22px;
+
+      .page-header--catalog & {
+        margin-bottom: 27px;
+      }
     }
 
     @media (min-width: $tablet-width) {
       margin-bottom: 74px;
+
+      .page-header--catalog & {
+        margin-bottom: 65px;
+      }
     }
 
     @media (min-width: $desktop-width) {
       margin-bottom: 99px;
+
+      .page-header--catalog & {
+        margin-bottom: 59px;
+      }
     }
   }
 
@@ -70,8 +96,6 @@
   }
 
   &__wrapper {
-    position: relative;
-
     display: grid;
     padding-left: 20px;
     padding-right: 20px;
@@ -148,7 +172,7 @@
         @include pseudo;
 
         right: 7px;
-        top: 26px;
+        top: 18px;
 
         width: 29px;
         height: 3px;
@@ -202,9 +226,15 @@
 
   &__promo {
     @media (min-width: $tablet-width) and (max-width: $not-desktop-width) {
+      padding-top: 18px;
       margin-left: 0;
       margin-right: auto;
       margin-bottom: 31px;
+
+      .page-header--catalog & {
+        padding-top: 0;
+        margin: 0 auto;
+      }
     }
 
     @media (min-width: $desktop-width) {

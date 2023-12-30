@@ -1,0 +1,65 @@
+.toggles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+
+  &--rates {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &--reviews {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 23px;
+    height: 23px;
+    padding: 0;
+
+    background-color: transparent;
+    border: 0;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 12px;
+      height: 12px;
+
+      background-color: rgba($color: $color-gray-850, $alpha: 0.3);
+      border-radius: 50%;
+      border: 3px solid $color-white;
+    }
+
+    &--reviews--active,
+    &--rates--active {
+      &::before {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 3px solid $color-gray-850;
+      }
+    }
+
+    &:hover::before {
+      background-color: $color-gray-850;
+    }
+
+    &:active::before {
+      background-color: rgba($color: $color-gray-850, $alpha: 0.1);
+    }
+  }
+}
+

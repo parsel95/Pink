@@ -1,21 +1,39 @@
 .advantages {
+  @media (max-width: $mobile-width-only) {
+    padding-top: 40px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+  }
+
   @media (min-width: $desktop-width) {
-    background-image: linear-gradient(175.2deg, $color-white 25.4%, $color-gray-50 25.4%);
+    padding-top: 62px;
+
+    background-image: linear-gradient(175.2deg, $color-white 28.4%, $color-gray-50 28.4%);
   }
 
   &__heading {
     margin: 0;
   }
 
-  &__heading-text-first {
-    margin-bottom: 30px;
+  &__heading-text {
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 30px;
 
-    @media (min-width: $tablet-width) {
-      margin-bottom: -2px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
 
     @media (min-width: $desktop-width) {
       margin-bottom: 0;
+    }
+  }
+
+  &__heading-text-first {
+    @media (min-width: $tablet-width) {
+      margin-bottom: -2px;
     }
   }
 
@@ -53,7 +71,7 @@
 
     @media (max-width: $mobile-width-only) {
       padding-top: 112px;
-      padding-bottom: 319px;
+      padding-bottom: 288px;
 
       text-align: center;
     }
@@ -99,6 +117,18 @@
   }
 
   &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px 0;
+
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 31px;
+
+      .advantages__list .advantages__item:nth-child(3) & {
+        margin-bottom: 0;
+      }
+    }
+
     @media (min-width: $desktop-width) {
       position: relative;
 
@@ -129,17 +159,13 @@
     font-size: 18px;
     line-height: 24px;
 
-    @media (max-width: $not-desktop-width) {
-      margin-bottom: 12px;
-    }
-
     @media (min-width: $desktop-width) {
       position: relative;
       z-index: 1;
 
       max-width: 240px;
       margin: 0 auto;
-      margin-bottom: 22px;
+      margin-bottom: 12px;
 
       font-size: 30px;
       line-height: 30px;
@@ -149,14 +175,6 @@
   &__text {
     margin: 0;
     line-height: 24px;
-
-    @media (max-width: $mobile-width-only) {
-      margin-bottom: 31px;
-
-      .advantages__list .advantages__item:nth-child(3) & {
-        margin-bottom: 0;
-      }
-    }
 
     @media (min-width: $desktop-width) {
       position: relative;

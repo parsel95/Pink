@@ -1,0 +1,26 @@
+.logo-footer {
+  display: flex;
+  justify-content: center;
+
+  &:hover {
+    color: $color-pink-650;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &__image {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  &__image-decorated {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+}

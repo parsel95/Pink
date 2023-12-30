@@ -1,13 +1,56 @@
 .post {
+  display: grid;
+  align-content: space-between;
+  padding-bottom: 15px;
+
+  background-color: $color-gray-50;
   line-height: 24px;
   font-size: 12px;
 
-  background-color: $third-color-primary;
+  @media (min-width: $tablet-width) {
+    padding-bottom: 21px;
+  }
+
+  &--panorama {
+    position: relative;
+
+    padding-bottom: 18px;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+
+    margin-bottom: 18px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 23px;
+    }
+
+    .post--panorama & {
+      position: relative;
+    }
+  }
+
+  &__wrapper {
+    &--panorama {
+      @media (min-width: $tablet-width) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+      }
+    }
+  }
 
   &__panorama-mark {
+    position: absolute;
+    top: 0;
+    right: 20px;
+
     @include flex-center;
     width: 140px;
     height: 36px;
+    margin: 0;
 
     color: $color-white;
 
@@ -15,11 +58,31 @@
     text-transform: uppercase;
 
     background-color: $first-color;
+
+    @media (min-width: $tablet-width) {
+      top: 57px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 54px;
+      right: 131px;
+    }
   }
 
   &__author {
+    margin: 0;
+    padding: 0 14px;
+
     font-weight: 700;
     font-size: 14px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0 27px;
+    }
   }
 
   &__time {
@@ -29,12 +92,100 @@
   }
 
   &__text {
+    margin: 0;
+    margin-bottom: 7px;
+    padding: 0 14px;
+
     font-size: 14px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 30px;
+      margin-bottom: 8px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0 27px;
+    }
+
+    .post__wrapper--panorama & {
+      @media (min-width: $tablet-width) {
+        grid-column: 1/-1;
+        margin-top: -5px;
+        margin-bottom: 7px;
+      }
+    }
+  }
+
+  &__like-container {
+    display: flex;
+    align-items: center;
+
+    padding: 0 14px;
+
+    @media (min-width: $tablet-width) {
+      justify-content: space-between;
+      padding: 0 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0 27px;
+    }
+
+    .post__wrapper--panorama & {
+      @media (min-width: $tablet-width) {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        justify-self: end;
+      }
+
+      @media (min-width: $desktop-width) {
+        padding: 0 30px;
+      }
+    }
+  }
+
+  &__like {
+    position: relative;
+    left: -6px;
+
+    display: block;
+    width: 13px;
+    height: 12px;
+    padding: 15px;
+    margin-right: 5px;
+
+    background-image: url("../img/icons/heart.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      left: 8px;
+      margin-right: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 5px;
+    }
+
+    .post__wrapper--panorama & {
+      @media (min-width: $desktop-width) {
+        top: -2px;
+        left: 7px;
+      }
+    }
   }
 
   &__amount-likes {
-    color: $first-color;
+    margin: 0;
 
+    color: $first-color;
     text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      order: -1;
+    }
   }
 }

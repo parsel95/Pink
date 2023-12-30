@@ -48,6 +48,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 35px;
 
     @media (max-width: $mobile-width-only) {
@@ -64,7 +65,8 @@
   }
 
   &__text {
-    margin: 0;
+    margin: 0 auto;
+    max-width: 300px;
 
     font-weight: 300;
     line-height: 24px;

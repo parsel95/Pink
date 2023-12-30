@@ -3,11 +3,20 @@
 
   @media (min-width: $tablet-width) {
     width: 48.4%;
+
+    .page-header--catalog & {
+      width: 60.4%;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: auto;
     display: flex;
+
+    .page-header--catalog & {
+      width: 48.4%;
+      justify-content: center;
+    }
   }
 
   &__wrapper {
@@ -22,17 +31,26 @@
     color: $color-white;
     text-align: center;
 
+    .page-header--catalog & {
+      line-height: normal;
+      padding: 0;
+    }
+
     @media (max-width: $mobile-width-only) {
       margin-bottom: 315px;
       padding: 0 20px;
       line-height: 120%;
+
+      .page-header--catalog & {
+        margin-bottom: 0;
+      }
     }
 
     @media (min-width: $tablet-width) {
       position: relative;
       z-index: 1;
 
-      padding: 18px 35px 0 54px;
+      padding: 0 35px 0 54px;
 
       line-height: 120%;
     }
@@ -68,6 +86,7 @@
 
     @media (min-width: $desktop-width) {
       bottom: -438px;
+      left: 47px;
 
       width: 1050px;
       height: 645px;

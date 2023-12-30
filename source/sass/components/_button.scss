@@ -10,8 +10,19 @@
   border: 3px solid $color-pink-650;
   border-radius: 30px;
 
+  &:hover {
+    background-color: $color-pink-650;
+    color: $color-white;
+  }
+
+  &:active {
+    background-color: $color-pink-650;
+    color: rgba($color: $color-white, $alpha: 0.3);
+  }
+
   @media (max-width: $mobile-width-only) {
     display: block;
+    width: 100%;
   }
 
   &--secondary {
@@ -30,9 +41,21 @@
   }
 
   &--cancel {
-    color: $color-gray-150;
-    border-color: $color-gray-150;
+    color: rgba($color: $color-gray-850, $alpha: 0.1);
+    border-color: rgba($color: $color-gray-850, $alpha: 0.1);
     background-color: transparent;
+
+    &:hover {
+      color: rgba($color: $color-gray-850, $alpha: 0.3);
+      border-color: rgba($color: $color-gray-850, $alpha: 0.3);
+      background-color: transparent;
+    }
+
+    &:active {
+      color: rgba($color: $color-white, $alpha: 0.3);
+      border-color: rgba($color: $color-gray-850, $alpha: 0);
+      background-color: rgba($color: $color-gray-850, $alpha: 0.3);
+    }
   }
 
   &--form {
@@ -43,5 +66,9 @@
     border-radius: 1px;
     border: 2px solid $color-gree-dark;
     background: $color-gree-dark;
+  }
+
+  &--standart {
+    padding: 15px;
   }
 }

@@ -1,16 +1,4 @@
 .page-main {
-  &__advantages {
-    margin-bottom: 40px;
-
-    @media (min-width: $tablet-width) {
-      margin-bottom: 90px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-bottom: 72px;
-    }
-  }
-
   &__heading {
     font-weight: 300;
     font-size: 24px;
@@ -20,6 +8,10 @@
     @media (min-width: $tablet-width) {
       font-size: 40px;
       line-height: normal;
+
+      .page-header--catalog & {
+        font-size: 50px;
+      }
     }
 
     @media (min-width: $desktop-width) {
@@ -29,5 +21,17 @@
 
   &__subheading {
     text-align: center;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+    }
+  }
+
+  &__wrapper {
+    background-image: linear-gradient(176.8deg, $color-white 361px, $color-gray-50 361px);
+
+    @media (min-width: $tablet-width) {
+      background-image: linear-gradient(176.4deg, $color-white 378px, $color-gray-50 378px);
+    }
   }
 }

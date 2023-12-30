@@ -1,6 +1,14 @@
 .rate {
-  &__list {
-    @include list;
+  position: relative;
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 35px;
+  }
+
+  &--list {
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
   }
 
   &__title {
@@ -8,24 +16,208 @@
     background-color: $second-color-primary;
     text-transform: uppercase;
     text-align: center;
+
+    @media (max-width: $mobile-width-only) {
+      position: relative;
+
+      padding: 0 20px;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+    }
+
+    .rate--list & {
+      @media (min-width: $tablet-width) {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__title-wrapper {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    padding: 13px 0 29px;
+    overflow: hidden;
+
+    border-right: 2px solid $color-white;
+    border-left: 2px solid $color-white;
+
+    @media (min-width: $tablet-width) {
+      padding: 13px 0 8px;
+
+      border-left: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 16px 0 20px;
+    }
+
+    .rates__list li:last-child & {
+      @media (min-width: $tablet-width) {
+        border-right: 2px solid $second-color-primary;
+      }
+    }
   }
 
   &__hit {
+    display: none;
+
     background-color: $first-color;
     transform: rotate(-45deg);
+
+    .rate--hit & {
+      position: absolute;
+      left: -107px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transform: rotate(-45deg);
+      height: 23px;
+      width: 100%;
+
+      @media (min-width: $tablet-width) {
+        left: -53px;
+        height: 19px;
+      }
+
+      @media (min-width: $desktop-width) {
+        left: -88px;
+        height: 26px;
+      }
+    }
   }
 
   &__name {
+    margin-bottom: -4px;
+
     font-weight: 700;
     font-size: 16px;
+
+    @media (max-width: $mobile-width-only) {
+      padding: 0 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+
+      font-size: 18px;
+    }
   }
 
   &__price {
     font-weight: 300;
     font-size: 18px;
+
+    @media (max-width: $mobile-width-only) {
+      padding: 0 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 24px;
+    }
+  }
+
+  &__point-wrapper {
+    @media (max-width: $mobile-width-only) {
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      background-color: $color-white;
+    }
   }
 
   &__point {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    min-height: 61px;
+
     text-transform: uppercase;
+    border-right: 2px solid $color-gray-300;
+    border-left: 2px solid $color-gray-300;
+
+    @media (min-width: $tablet-width) {
+      justify-content: center;
+      padding: 0 15px;
+      min-height: 48px;
+
+      text-transform: none;
+      background-color: $color-white;
+      border-left: none;
+      border-bottom: 2px solid $color-gray-300;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0 20px;
+      min-height: 62px;
+
+      font-size: 18px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      height: 2px;
+      background-color: $color-gray-300;
+
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
+    }
+
+    .rate--list & {
+      @media (min-width: $tablet-width) {
+        justify-content: flex-start;
+
+        border-left: 2px solid $color-gray-300;
+      }
+    }
+
+    .rate--list &:nth-of-type(2) {
+      @media (min-width: $tablet-width) {
+        border-top: 2px solid $color-gray-300;
+      }
+    }
+  }
+
+  &__point-text {
+    padding: 7px 0;
+    max-width: 190px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &__point-sign {
+    .rate__point--yes & {
+      &::before {
+        content: "";
+        display: block;
+        width: 31px;
+        height: 21px;
+        background-image: url("../img/icons/yes.svg");
+      }
+    }
+
+    .rate__point--no & {
+      &::before {
+        content: "";
+        display: block;
+        width: 27px;
+        height: 27px;
+        background-image: url("../img/icons/no.svg");
+      }
+    }
   }
 }

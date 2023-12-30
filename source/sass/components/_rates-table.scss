@@ -1,0 +1,158 @@
+.rates-table {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  &__wrapper {
+    border-spacing: 0;
+  }
+
+  &__title {
+    position: relative;
+
+    width: 25%;
+    text-transform: uppercase;
+    text-align: center;
+    overflow: hidden;
+
+    border-right: 2px solid $color-gray-300;
+    color: $color-white;
+    background-color: $color-gray-850;
+
+    &--first {
+      background-color: transparent;
+    }
+
+    &--first--bottom {
+      border-bottom: 2px solid $color-gray-300;
+    }
+
+    &:last-of-type {
+      @media (min-width: $tablet-width) {
+        border-right: 2px solid $second-color-primary;
+      }
+    }
+  }
+
+  &__title-content {
+    display: flex;
+    flex-direction: column;
+    padding: 11px 0 8px;
+
+    @media (min-width: $desktop-width) {
+      padding: 14px 0 20px;
+    }
+  }
+
+  &__hit {
+    display: none;
+
+    background-color: $first-color;
+    transform: rotate(-45deg);
+
+    .rates-tablet__title--hit & {
+      position: absolute;
+      left: -107px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transform: rotate(-45deg);
+      height: 23px;
+      width: 100%;
+
+      @media (min-width: $tablet-width) {
+        left: -53px;
+        height: 19px;
+      }
+
+      @media (min-width: $desktop-width) {
+        left: -88px;
+        height: 26px;
+      }
+    }
+  }
+
+  &__title-name {
+    margin-bottom: -4px;
+
+    font-weight: 700;
+    font-size: 16px;
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+
+      font-size: 18px;
+    }
+  }
+
+  &__title-price {
+    font-weight: 300;
+    font-size: 18px;
+
+    @media (min-width: $desktop-width) {
+      font-size: 24px;
+    }
+  }
+
+  &__table-body {
+    background-color: $color-white;
+  }
+
+  &__cell {
+    position: relative;
+
+    padding: 0 15px;
+
+    border-right: 2px solid $color-gray-300;
+    border-left: none;
+    border-bottom: 2px solid $color-gray-300;
+
+    @media (min-width: $desktop-width) {
+      padding: 0 20px;
+      min-height: 62px;
+
+      font-size: 18px;
+    }
+
+    &--first {
+      justify-content: flex-start;
+
+      border-left: 2px solid $color-gray-300;
+    }
+  }
+
+  &__sign {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 45px;
+
+    @media (min-width: $desktop-width) {
+      min-height: 59px;
+    }
+
+    &--yes {
+      &::before {
+        content: "";
+        display: block;
+        width: 31px;
+        height: 21px;
+        background-image: url("../img/icons/yes.svg");
+      }
+    }
+
+    &--no {
+      &::before {
+        content: "";
+        display: block;
+        width: 27px;
+        height: 27px;
+        background-image: url("../img/icons/no.svg");
+      }
+    }
+  }
+}

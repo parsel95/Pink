@@ -1,0 +1,45 @@
+.your-photo {
+  padding-top: 44px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 88px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 83px;
+  }
+
+  &__subheading-container {
+    margin-bottom: 42px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 70px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 66px;
+    }
+  }
+
+  &__subheading {
+    margin: 0;
+  }
+
+  &__wrapper {
+    padding-top: 20px;
+    padding-bottom: 44px;
+
+    background-color: $color-gray-50;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 57px;
+      padding-bottom: 53px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 940px;
+      padding-right: 60px;
+      padding-bottom: 56px;
+    }
+  }
+}

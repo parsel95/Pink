@@ -1,3 +1,35 @@
 .rates {
-  background-color: $third-color-primary;
+  padding-top: 131px;
+  padding-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 110px;
+    padding-bottom: 67px;
+
+    background-image: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 162px;
+    padding-bottom: 95px;
+  }
+
+  &__list {
+    @include list;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &__item {
+    @media (max-width: $mobile-width-only) {
+      display: none;
+
+      &--active {
+        display: list-item;
+      }
+    }
+  }
 }

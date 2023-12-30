@@ -1,5 +1,26 @@
 .developer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 15px;
+
   color: inherit;
   line-height: 18px;
   text-decoration: none;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
+
+  &__image {
+    color: $color-pink-650;
+
+    .developer:hover & {
+      color: $color-gray-850;
+    }
+
+    .developer:active & {
+      color: rgba($color: $color-gray-850, $alpha: 0.3);
+    }
+  }
 }
