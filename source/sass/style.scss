@@ -28,10 +28,10 @@
 @import "components/container";
 @import "components/logo-header";
 @import "components/logo-footer";
-@import "components/_toggles";
-@import "components/_rates-table";
-@import "components/_form-editor";
-@import "components/_scale";
+@import "components/toggles";
+@import "components/rates-table";
+@import "components/form-editor";
+@import "components/scale";
 
 // layout
 // Папка layout/ содержит всё, что принимает участие в постройке раскладки сайта или приложения. Эта папка может содержать стили для основных частей сайта (шапка, подвал, навигация, боковая панель…), сетка или даже CSS-стили для всех форм.
@@ -47,6 +47,7 @@
 @import "layout/page-main";
 @import "layout/promo";
 @import "layout/your-photo";
+@import "layout/modal";
 
 // pages
 // Если у вас есть стили, зависящие от страницы, лучше положить их в папку pages/, в файл, названный как и страница. Например, не редкость – иметь очень специфичные стили для главной страницы, следовательно, существует потребность в _home.scss в pages/.

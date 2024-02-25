@@ -1,8 +1,51 @@
 .field {
-  &__lead {
-    color: $first-color;
+  .field-group--opinion & {
+    padding-top: 15px;
+  }
 
+  .field-group--name & {
+    @media (min-width: $tablet-width) {
+      display: flex;
+      gap: 18px;
+    }
+  }
+
+  .field-group--contacts & {
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__lead {
+    display: block;
+    padding-top: 17px;
+    padding-bottom: 6px;
+
+    color: $first-color;
     text-transform: uppercase;
+
+    .field-group--name &,
+    .field-group--contacts & {
+      padding-right: 23px;
+      padding-left: 23px;
+    }
+
+    .field-group--contacts & {
+      @media (min-width: $tablet-width) {
+        padding-left: 19px;
+        padding-top: 11px;
+        padding-bottom: 12px;
+      }
+    }
+
+    .field-group--name & {
+      @media (min-width: $tablet-width) {
+        display: flex;
+        align-items: center;
+        padding: 0;
+      }
+    }
   }
 
   &__input::placeholder,
@@ -13,5 +56,79 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
+  }
+
+  &__input-wrapper {
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .field-group--contacts & {
+      @media (min-width: $tablet-width) {
+        order: -1;
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 1px;
+    border: 2px solid $color-gray-300;
+
+    .field-group--opinion & {
+      min-height: 202px;
+      resize: none;
+
+      @media (min-width: $tablet-width) {
+        min-height: 193px;
+      }
+
+      @media (min-width: $desktop-width) {
+        min-height: 126px;
+      }
+    }
+  }
+
+  &__input-image {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      right: 0;
+      display: block;
+      background-color: $color-gray-300;
+    }
+
+    &::before {
+      @media (min-width: $tablet-width) {
+        content: "";
+        padding: 30px;
+        display: block;
+
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .field--phone &::before {
+      @media (min-width: $tablet-width) {
+        width: 20px;
+        height: 19px;
+        background-image: url("../img/icons/phone.svg");
+      }
+    }
+
+    .field--mail &::before {
+      @media (min-width: $tablet-width) {
+        width: 18px;
+        height: 13px;
+        background-image: url("../img/icons/mail.svg");
+      }
+    }
   }
 }

@@ -1,5 +1,78 @@
 .form {
+  padding-top: 44px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 91px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 65px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px 70px;
+    }
+  }
+
+  &__subheading {
+    margin: 0;
+  }
+
+  &__subheading-container {
+    margin-bottom: 17px;
+
+    @media (min-width: $tablet-width) {
+      width: 81%;
+      margin-bottom: 74px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 72%;
+      margin-bottom: 86px;
+    }
+  }
+
+  &__group {
+    &:last-of-type {
+      @media (min-width: $tablet-width) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__button-container {
+    padding-bottom: 16px;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 0;
+    }
+  }
+
+  &__button {
+    margin-bottom: 34px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+
   &__additional {
+    margin: 0;
+    text-align: center;
     text-transform: uppercase;
   }
 

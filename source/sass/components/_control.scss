@@ -1,3 +1,84 @@
 .control {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 41px 1fr;
+  gap: 0 29px;
+
   font-size: 18px;
+
+  &__input {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 38px;
+    margin: 0;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    opacity: 0;
+
+    .control--radio & {
+      height: 42px;
+    }
+  }
+
+  &__lead {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 41px 1fr;
+    gap: 29px;
+    align-items: center;
+
+    @media (min-width: $tablet-width) {
+      gap: 20px;
+    }
+
+    .control--checkbox & {
+      gap: 18px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+
+      height: 38px;
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    .control--radio &::before,
+    .control--radio &::after {
+      height: 42px;
+    }
+
+    &::before {
+      background-color: $color-white;
+      border-radius: 1px;
+      border: 2px solid $color-gray-300;
+    }
+
+    .control--radio &::before {
+      border-radius: 50%;
+    }
+
+    .control--radio .control__input:checked + &::after {
+      background-clip: padding-box;
+      background-color: $color-pink-650;
+      border: 13px solid transparent;
+      border-radius: 50%;
+
+      @media (min-width: $tablet-width) {
+        border-width: 11px;
+      }
+    }
+
+    .control--checkbox .control__input:checked + &::after {
+      background-repeat: no-repeat;
+      background-position: calc(50% + 1px) 50%;
+      background-image: url("../img/icons/check.svg");
+    }
+  }
 }

@@ -1,4 +1,14 @@
 .page-main {
+  &--form {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 48px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+
   &__heading {
     font-weight: 300;
     font-size: 24px;
@@ -9,7 +19,8 @@
       font-size: 40px;
       line-height: normal;
 
-      .page-header--catalog & {
+      .page-header--catalog &,
+      .page-header--form & {
         font-size: 50px;
       }
     }

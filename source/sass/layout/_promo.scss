@@ -7,6 +7,10 @@
     .page-header--catalog & {
       width: 60.4%;
     }
+
+    .page-header--form & {
+      width: 80.4%;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -31,7 +35,8 @@
     color: $color-white;
     text-align: center;
 
-    .page-header--catalog & {
+    .page-header--catalog &,
+    .page-header--form & {
       line-height: normal;
       padding: 0;
     }
@@ -41,7 +46,8 @@
       padding: 0 20px;
       line-height: 120%;
 
-      .page-header--catalog & {
+      .page-header--catalog &,
+      .page-header--form & {
         margin-bottom: 0;
       }
     }

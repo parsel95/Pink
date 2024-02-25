@@ -27,6 +27,12 @@
         padding-bottom: 75px;
       }
     }
+
+    .page-footer--form & {
+      @media (min-width: $desktop-width) {
+        padding-top: 68px;
+      }
+    }
   }
 
   &__logo {
