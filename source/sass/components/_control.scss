@@ -58,6 +58,14 @@
       background-color: $color-white;
       border-radius: 1px;
       border: 2px solid $color-gray-300;
+
+      .field-group__item:hover & {
+        border-color: $color-gray-850;
+      }
+
+      .field-group__item:active & {
+        border-color: $color-pink-650;
+      }
     }
 
     .control--radio &::before {

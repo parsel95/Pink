@@ -80,6 +80,15 @@
     border-radius: 1px;
     border: 2px solid $color-gray-300;
 
+    &:hover {
+      border-color: $color-gray-850;
+    }
+
+    &:focus {
+      outline: 2px solid $color-pink-650;
+      outline-offset: -2px;
+    }
+
     .field-group--opinion & {
       min-height: 202px;
       resize: none;
@@ -99,7 +108,7 @@
 
     @media (min-width: $tablet-width) {
       position: absolute;
-      right: 0;
+      right: 2px;
       display: block;
       background-color: $color-gray-300;
     }
@@ -107,7 +116,7 @@
     &::before {
       @media (min-width: $tablet-width) {
         content: "";
-        padding: 30px;
+        padding: 29px;
         display: block;
 
         background-position: center;
