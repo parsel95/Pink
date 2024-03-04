@@ -1,6 +1,12 @@
 .promo {
   position: relative;
 
+  // .page-header--catalog &,
+  // .page-header--form & {
+  //   display: flex;
+  //   flex-direction: column;
+  // }
+
   @media (min-width: $tablet-width) {
     width: 48.4%;
 
@@ -16,6 +22,7 @@
   @media (min-width: $desktop-width) {
     width: auto;
     display: flex;
+    flex-direction: column;
 
     .page-header--catalog & {
       width: 48.4%;
@@ -39,6 +46,10 @@
     .page-header--form & {
       line-height: normal;
       padding: 0;
+
+      @media (min-width: $tablet-width) {
+        max-width: none;
+      }
     }
 
     @media (max-width: $mobile-width-only) {
@@ -56,6 +67,7 @@
       position: relative;
       z-index: 1;
 
+      max-width: 336px;
       padding: 0 35px 0 54px;
 
       line-height: 120%;

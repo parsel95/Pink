@@ -19,25 +19,38 @@ buttonElement.addEventListener('click', () => {
 
 let imagesFrame = document.querySelector('.promo__image');
 const tabletWidthMediaQuery = window.matchMedia('(min-width: 660px) and (max-width: 999px)');
-let baseWidth = 660;
 const mobileWidthMediaQuery = window.matchMedia('(max-width: 659px)');
 const desktopMediaQuery = window.matchMedia('(min-width: 1000px)');
+const windowInnerWidth = document.documentElement.clientWidth;
 
+// function printLog (isMobileSize) {
+//   let imagesFramePosition = (window.innerWidth - baseWidth)  + 'px';
 
-function printLog (isMobileSize) {
-  let imagesFramePosition = (window.innerWidth - baseWidth)  + 'px';
+//   const size = isMobileSize ? imagesFrame.style.left = imagesFramePosition :
+//   window.matchMedia('(min-width: 1000px)').matches ? imagesFrame.style.left = 47 + 'px' :
+//   window.matchMedia('(max-width: 659px)').matches ? imagesFrame.style.left = 0 + 'px':
+//   imagesFrame.style.left = 0 + 'px';
 
-  const size = isMobileSize ? imagesFrame.style.left = imagesFramePosition :
-  window.matchMedia('(min-width: 1000px)').matches ? imagesFrame.style.left = 47 + 'px' :
-  window.matchMedia('(max-width: 659px)').matches ? imagesFrame.style.left = 0 + 'px':
-  imagesFrame.style.left = 0 + 'px';
+//   console.log(`Padding у Images: ${size}`)
+// };
 
-  console.log(`Padding у Images: ${size}`)
-};
+if (mobileWidthMediaQuery.matches) {
+  let baseWidth = 320;
+  let imagesFramePosition = (windowInnerWidth - baseWidth)/2  + 'px';
+  imagesFrame.style.left = imagesFramePosition;
+  console.log(document.documentElement.clientWidth);
+}
 
-window.addEventListener('resize', function () {
-  printLog(tabletWidthMediaQuery.matches);
-});
+if (tabletWidthMediaQuery.matches) {
+  let baseWidth = 660;
+  let imagesFramePosition = (windowInnerWidth - baseWidth)  + 'px';
+  imagesFrame.style.left = imagesFramePosition;
+  console.log(document.documentElement.clientWidth);
+}
+
+if (desktopMediaQuery.matches) {
+  imagesFrame.style.left = 47 + 'px';
+}
 
 // br в секции effect при планшетном разрешении
 
@@ -294,7 +307,9 @@ if (mobileWidthMediaQuery.matches) {
 // Переполнение в promo в планшетной версии
 
 if (tabletWidthMediaQuery.matches) {
-  imagesFrame.style.bottom = (730 - pageHeader.offsetHeight) - 384 + 'px';
+  if (pageHeader.offsetHeight > 730) {
+    imagesFrame.style.bottom = (730 - pageHeader.offsetHeight) - 384 + 'px';
+  }
 }
 
 // Ориентация логотип html-academy при расширении social
@@ -305,4 +320,17 @@ let pageFooterWrapper = document.querySelector('.page-footer__wrapper');
 if (notMobileWidthMediaQuery.matches) {
   if (pageFooterWrapper.offsetHeight > 163)
   pageFooterDeveloper.style.alignSelf = 'start';
+};
+
+// Удаления picture в advantages__item в мобильной и планшетной версии
+
+const ExceptDesktopWidthMediaQuery = window.matchMedia('(max-width: 999px)');
+let advantagesItemPictures = document.querySelectorAll('.advantages__item-picture');
+
+
+for (let i = 0; i < advantagesItemPictures.length; i++) {
+  if (ExceptDesktopWidthMediaQuery.matches) {
+    advantagesItemPictures[i].classList.add('advantages__item--disable');
+    console.log("шалость удалась");
+  }
 };

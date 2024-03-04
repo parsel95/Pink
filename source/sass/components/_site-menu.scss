@@ -64,7 +64,9 @@
 
     @media (min-width: $desktop-width) {
       padding: 46.5px 39.5px;
+      max-width: 210px;
 
+      text-align: center;
       text-transform: none;
       font-weight: 400;
       line-height: 18px;

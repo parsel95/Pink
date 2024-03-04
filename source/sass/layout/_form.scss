@@ -67,6 +67,7 @@
 
     @media (min-width: $tablet-width) {
       margin-bottom: 0;
+      max-width: 320px;
     }
   }
 
@@ -74,6 +75,14 @@
     margin: 0;
     text-align: center;
     text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      max-width: 250px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 350px;
+    }
   }
 
   &__special-text {
