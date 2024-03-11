@@ -24,7 +24,7 @@ if (notMobileWidthMediaQuery.matches) {
   formSubheading.innerHTML = "Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:"
 } else {
   formSubheading.innerHTML = "Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!"
-};
+}
 
 // Добавление класса field-group__heading для legend у каждого fieldset и удаление класса field-group__heading у field-group__heading
 
@@ -36,14 +36,14 @@ for (let i = 0; i < fieldGroupHeadings.length; i++) {
     fieldGroupHeadings[i].classList.remove('field-group__heading');
     fieldGroupHeadings[i].classList.add('visually-hidden');
   }
-};
+}
 
 for (let i = 0; i < fieldGroupLegends.length; i++) {
   if (notMobileWidthMediaQuery.matches) {
     fieldGroupLegends[i].classList.remove('visually-hidden');
     fieldGroupLegends[i].classList.add('field-group__heading');
   }
-};
+}
 
 // удаление класса container у всех field-group__wrapper при не мобильно разрешении и удаление класса container у form__container при мобильном разрешении
 
@@ -53,14 +53,14 @@ for (let i = 0; i < fieldGroupWrappers.length; i++) {
   if (notMobileWidthMediaQuery.matches) {
     fieldGroupWrappers[i].classList.remove('container');
   }
-};
+}
 
 const mobileWidthMediaQuery = window.matchMedia('(max-width: 659px)');
 let formContainer = document.querySelector('.form__container');
 
 if (mobileWidthMediaQuery.matches) {
   formContainer.classList.remove('container');
-};
+}
 
 // Изменение текста в form__special-text при десктопном разрешении
 
@@ -69,7 +69,7 @@ let formAdditionalText = document.querySelector('.form__additional-text');
 
 if (desktopMediaQuery.matches) {
   formAdditionalText.textContent = ' — обязательные для заполнения поля';
-};
+}
 
 // Модальное окно при нажатии кнопки отправить и его закрытие
 

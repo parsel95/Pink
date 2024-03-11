@@ -29,7 +29,7 @@ if (notMobileWidthMediaQuery.matches) {
 
 function addBrPostList (isMobileSize) {
   isMobileSize ? postListSubheading.innerHTML = "Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?" : postListSubheading.innerHTML = "Взгляните на фотографии, которые выкладывают пользователи!<br> Видите, как не хватает ваших?";
-};
+}
 
 window.addEventListener('resize', function () {
   addBrPostList(notMobileWidthMediaQuery.matches);
@@ -37,8 +37,8 @@ window.addEventListener('resize', function () {
 
 // padding-top в post--panorama
 
-let postPanorama = document.querySelector('.post--panorama');
-let postPanoramaImg = document.querySelector('.post--panorama .post__img');
+// let postPanorama = document.querySelector('.post--panorama');
+// let postPanoramaImg = document.querySelector('.post--panorama .post__img');
 
 // Слайдер в редакторе фото
 
@@ -50,7 +50,7 @@ for (let i = 0; i < formEditorLinks.length; i++) {
     evt.preventDefault();
     slideSwitchFormEditor(formEditorLinks[i].dataset.name)
   });
-};
+}
 
 function slideSwitchFormEditor(slideNumberFormEditor) {
   if (typeof slideNumberFormEditor === 'number') {
@@ -70,7 +70,7 @@ function slideSwitchFormEditor(slideNumberFormEditor) {
       }
     }
   }
-};
+}
 
 // Добавление класса container для обёртки редактора изображения, чтобы управлять цветом фона
 
@@ -85,9 +85,7 @@ if (desktopMediaQuery.matches) {
 
 // Кнопка лайка
 
-let postLikes = document.querySelectorAll('.post__like');
+// let postLikes = document.querySelectorAll('.post__like');
 
 
-for (let i=0; i < postLikes.length; i++) {
-
-}
+// for (let i=0; i < postLikes.length; i++) {}

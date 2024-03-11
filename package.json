@@ -1,13 +1,14 @@
 {
-  "name": "Cat-Energy",
+  "name": "Pink",
   "private": true,
-  "description": "Личный проект «Cat-Energy» от HTML Academy",
+  "description": "Личный проект «Pink» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": ">1.0.0",
     "@linthtml/linthtml": "^0.9.5",
     "autoprefixer": "^10.4.0",
     "browser-sync": "^2.27.7",
     "del": "^7.1.0",
+    "eslint": "^8.57.0",
     "gulp": ">3.9.1",
     "gulp-dart-sass": "^1.0.2",
     "gulp-htmlmin": "^5.0.1",

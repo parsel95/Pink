@@ -65,7 +65,7 @@ if (tabletWidthMediaQuery.matches) {
 
 function addBrEffect (isMobileSize) {
   isMobileSize ? effectTitle.innerHTML = "Эффект<br> на 24 часа!" : effectTitle.innerHTML = "Эффект на 24 часа!";
-};
+}
 
 window.addEventListener('resize', function () {
   addBrEffect(tabletWidthMediaQuery.matches);
@@ -82,7 +82,7 @@ for (let i = 0; i < reviewsButtons.length; i++) {
     evt.preventDefault();
     slideSwitchReviews(reviewsButtons[i].dataset.name)
   });
-};
+}
 
 function slideSwitchReviews(slideNumberDelivery) {
   if (typeof slideNumberDelivery === 'number') {
@@ -106,7 +106,7 @@ function slideSwitchReviews(slideNumberDelivery) {
       }
     }
   }
-};
+}
 
 let reviewPrev = document.querySelector('.reviews__arrow--left');
 let reviewNext = document.querySelector('.reviews__arrow--right');
@@ -124,7 +124,7 @@ function validSlideNumberCheck(slideNumber) {
   currentSlide = validNumber;
 
   return currentSlide;
-};
+}
 
 reviewPrev.onclick = function(evt){
   evt.preventDefault();
@@ -149,7 +149,7 @@ for (let i = 0; i < ratesButtons.length; i++) {
     evt.preventDefault();
     slideSwitchRates(ratesButtons[i].dataset.name);
   });
-};
+}
 
 function slideSwitchRates(slideNumberDelivery) {
   if (typeof slideNumberDelivery === 'number') {
@@ -173,7 +173,7 @@ function slideSwitchRates(slideNumberDelivery) {
       }
     }
   }
-};
+}
 
 // Добавление класса rate__item для rate--list
 
@@ -320,7 +320,7 @@ let pageFooterWrapper = document.querySelector('.page-footer__wrapper');
 if (notMobileWidthMediaQuery.matches) {
   if (pageFooterWrapper.offsetHeight > 163)
   pageFooterDeveloper.style.alignSelf = 'start';
-};
+}
 
 // Удаления picture в advantages__item в мобильной и планшетной версии
 
@@ -333,7 +333,7 @@ for (let i = 0; i < advantagesItemPictures.length; i++) {
     advantagesItemPictures[i].classList.add('advantages__item--disable');
     console.log("шалость удалась");
   }
-};
+}
 
 
 
