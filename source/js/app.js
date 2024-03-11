@@ -334,3 +334,6 @@ for (let i = 0; i < advantagesItemPictures.length; i++) {
     console.log("шалость удалась");
   }
 };
+
+
+

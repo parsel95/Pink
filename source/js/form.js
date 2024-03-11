@@ -62,11 +62,27 @@ if (mobileWidthMediaQuery.matches) {
   formContainer.classList.remove('container');
 };
 
-// изменение текста в form__special-text при десктопном разрешении
+// Изменение текста в form__special-text при десктопном разрешении
 
 const desktopMediaQuery = window.matchMedia('(min-width: 1000px)');
 let formAdditionalText = document.querySelector('.form__additional-text');
 
 if (desktopMediaQuery.matches) {
   formAdditionalText.textContent = ' — обязательные для заполнения поля';
+};
+
+// Модальное окно при нажатии кнопки отправить и его закрытие
+
+let formBody = document.querySelector('.form__body');
+let modalSuccess = document.querySelector('.modal--success');
+
+formBody.onsubmit = function(evt) {
+  evt.preventDefault();
+  modalSuccess.classList.add('modal--active');
+}
+
+let modalSuccessButton = document.querySelector('.modal--success .modal__button');
+
+modalSuccessButton.onclick = function() {
+  modalSuccess.classList.remove('modal--active');
 };
